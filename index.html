@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sightengine Görsel Analiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    input, button {
+      padding: 8px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .drop-zone {
+      border: 2px dashed #888;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: #555;
+      margin: 10px 0;
+      transition: 0.3s;
+    }
+
+    .drop-zone.dragover {
+      background-color: #f0f8ff;
+      border-color: #2196f3;
+    }
+
+    #resultBars {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Sightengine Görsel Analiz</h2>
+  <h3> URL ile analiz</h3>
+  <input type="text" id="imageUrlInput" placeholder="Görsel URL girin" />
+  <button id="analyzeUrlBtn">URL'yi analiz et</button>
+
+  <h3>Sürükle & Bırak ile analiz</h3>
+  <div id="dropZone" class="drop-zone">Dosyayı buraya bırak ya da tıkla</div>
+  <input type="file" id="imageFileInput" accept="image/*" style="display:none;" />
+
+  <h3> Sonuç:</h3>
+  <div id="resultBars">Henüz analiz yapılmadı.</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
